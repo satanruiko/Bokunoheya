@@ -8,6 +8,7 @@ let changelog=(a)=>{
     if (rand_math===0){changelog();}
     else {logo_now=rand_math;
         logo_img.src="${logo_now}.ico";
+        alert(logo_img);
         setTimeout(changelog,5000);}
 }
 setTimeout(changelog,5000);
