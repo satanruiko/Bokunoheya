@@ -7,7 +7,7 @@ let changelog=(a)=>{
     let rand_math=Math.ceil(Math.random() * logo_max);
     if (rand_math===0){changelog();}
     else {logo_now=rand_math;
-        logo_img.src="${logo_now}.ico
+        logo_img.src="${logo_now}.ico";
         setTimeout(changelog,5000);}
 }
 setTimeout(changelog,5000);
