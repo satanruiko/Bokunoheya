@@ -2,6 +2,9 @@
 a:link {text-decoration: none;}
 a:hover {text-decoration: underline;}
 a:active {text-decoration: underline;}
+.linkfixedcolor{
+    color: white;}
+.citedlinkcolor{color: #ee457f;}
 body{
     background:#7db9de}
 #middle p{
@@ -11,18 +14,18 @@ body{
     flex-direction: column;
     justify-content: space-between;
     float: left;
-    margin:0 3%;
-    width: 20%;
+    margin:0 1%;
+    width: 15%;
     height: 100%;}
 #middle{
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
     position: absolute;
-    left: 26%;
+    left: 17%;
     right: 15%;
     margin: 0 2%;
-    width: 55%;
+    width: 62%;
     height: 100%;}
 #right{
     display: flex;
@@ -31,10 +34,11 @@ body{
     float: right;
     width: 15%;
     height: 100%;}
-.title{
-    color: white;}
+#left_top{
+    margin: 2% auto 0;}
+#left_middle{margin: 0 auto;}
 #katou_megumi{
-    margin: 0 auto;}
+    margin:25% auto 0;}
 .greeting{
     color:white;
     text-align: center;}
@@ -48,6 +52,10 @@ body{
 .label{
     color: #ee457f;
     font-size: 1em;}
+.Read_more{
+    background-color:#eb7a77;
+    color: white;
+    width: fit-content;}
 #portrait{
     margin: 5px auto;}
 ul{
@@ -66,8 +74,6 @@ ul{
     position: absolute;
     right: 2px;
     top: 2px;}
-.a1{
-    color: white;}
 #middle::-webkit-scrollbar{width: 0.5em;}
 #middle::-webkit-scrollbar-track{background:#7db9de}
 #middle::-webkit-scrollbar-thumb{background: #005caf;border-radius: 6px;}
