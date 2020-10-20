@@ -1,23 +1,61 @@
 /*Anime*/
-a:link {text-decoration: none;}
-a:visited {text-decoration: none;}
-a:hover {text-decoration: underline;}
-a:active {text-decoration: underline;}
-body{background:#f8c3cd ;}
-#tips{border-bottom:3px dashed#51a8dd;
-    height: 135px;}
-#a{list-style-type: upper-roman;}
-#portrait{position: absolute;
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+body {
+    background: #f8c3cd;
+}
+
+#tips {
+    border-bottom: 3px dashed#51a8dd;
+    height: 135px;
+}
+
+#a {
+    list-style-type: upper-roman;
+}
+
+#portrait {
+    position: absolute;
     right: 4px;
-    top: 4px;}
-#main{position: absolute;
-    top: 150px;}
-.fragment{float: left;
+    top: 4px;
+}
+
+#main {
+    position: absolute;
+    top: 150px;
+}
+
+.fragment {
+    float: left;
     margin: 5px;
     width: 190px;
-    height: fit-content;}
-.img:hover{border: 2px solid white}
-.descri{width: 190px;
-    height: fit-content;}
-.name{text-align: center;
-    color: white;}
+    height: fit-content;
+}
+
+.img:hover {
+    border: 2px solid white
+}
+
+.descri {
+    width: 190px;
+    height: fit-content;
+}
+
+.name {
+    text-align: center;
+    color: white;
+}
