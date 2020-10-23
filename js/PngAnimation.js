@@ -1,6 +1,6 @@
 "use strict"
 function set_img_wraps(img){
-    if (img.height >=500){
+    if (img.height >=300){
         let img_wraps=document.createElement('div');
         img.parentNode.insertBefore(img_wraps,img);
         img_wraps.appendChild(img);
