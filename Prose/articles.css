@@ -20,7 +20,7 @@ a:active {
 }
 
 body {
-    background: #7db9de
+    background-image: linear-gradient(to left,#7db9de,#f596aa);
 }
 
 #contain {
@@ -124,7 +124,7 @@ ul {
 }
 
 #middle::-webkit-scrollbar-track {
-    background: #7db9de
+    display: none;
 }
 
 #middle::-webkit-scrollbar-thumb {
@@ -152,3 +152,5 @@ ul {
 .is_center{
     margin: 20px auto;
 }
+.heimu:hover{color: white;}
+.heimu{background-color: black;transition: 0.5s;}

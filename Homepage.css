@@ -113,7 +113,7 @@ ul {
 }
 
 #middle::-webkit-scrollbar-track {
-    background: #7db9de
+    display: none;
 }
 
 #middle::-webkit-scrollbar-thumb {

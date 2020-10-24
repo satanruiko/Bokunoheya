@@ -3,10 +3,6 @@ a:link {
     text-decoration: none;
 }
 
-a:visited {
-    text-decoration: none;
-}
-
 a:hover {
     text-decoration: underline;
 }
@@ -16,22 +12,30 @@ a:active {
 }
 
 body {
-    background: #f8c3cd;
+    background: whitesmoke;
 }
 
-#tips {
-    border-bottom: 3px dashed#51a8dd;
-    height: 135px;
+#top{
+    height: 134px;
+    width: 100%;
+    border: 2px solid #51a8dd;
+    position: relative;
 }
 
-#a {
+#tips{
     list-style-type: upper-roman;
+    height: 134px;
+    width: fit-content;
 }
 
+#tips_wrap{
+    width: fit-content;
+    margin: auto 0 auto 10px;
+}
 #portrait {
     position: absolute;
-    right: 4px;
-    top: 4px;
+    right: 3px;
+    top: 2px;
 }
 
 #main {
@@ -41,21 +45,24 @@ body {
 
 .fragment {
     float: left;
-    margin: 5px;
-    width: 190px;
+    margin:5px 20px;
+    border:2px solid #a5dee4;
+    width: 181px;
     height: fit-content;
-}
-
-.img:hover {
-    border: 2px solid white
+    box-shadow: 2px 2px 3px #aaaaaa;
 }
 
 .descri {
     width: 190px;
     height: fit-content;
+    padding: 0 2px;
+}
+
+.descri p{
+    text-indent:2em;
 }
 
 .name {
     text-align: center;
-    color: white;
+    color:#7db9de;
 }
