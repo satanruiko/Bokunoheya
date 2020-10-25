@@ -1,3 +1,4 @@
+
 #Wrap {
     background: #eaf3f8;
     width: 32px;
@@ -19,20 +20,22 @@
 
 
 .CoProperty {
+    width: 300px;
+    height: 25px;
     margin: 30px 0;
     display: block;
     border-radius: 2px;
     border: none;
-    padding-left: 20px;
+    padding-left: 35px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 input[type=text] {
-    background: url(account.png) no-repeat left/20px 100%;
+    background: url(account.png) no-repeat left/25px 100%;
 }
 
 input[type=password] {
-    background: url(password.png) no-repeat left/20px 100%;
+    background: url(password.png) no-repeat left/25px 100%;
 }
 
 input[type=submit] {
