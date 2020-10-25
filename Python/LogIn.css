@@ -1,0 +1,45 @@
+#Wrap {
+    background: #eaf3f8;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+#TheArrow{
+    display: block;
+    margin: auto auto;
+}
+
+#IndexStudy {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+input[type=text] {
+    background: url(account.png) no-repeat left/20px 100%;
+    display: block;
+    margin: 10px 0;
+    border-radius: 2px;
+    padding-left: 20px;
+}
+
+input[type=password] {
+    background: url(password.png) no-repeat left/20px 100%;
+    display: block;
+    margin: 10px 0;
+    border-radius: 2px;
+    padding-left: 20px;
+}
+
+input[type=submit] {
+    display: block;
+    margin: 20px auto;
+    width: 50px;
+}
+
+#FormPartion {
+    margin: 20px auto;
+    width: max-content;
+}
