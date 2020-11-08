@@ -23,20 +23,24 @@ body {
     background-image: linear-gradient(to left,#7db9de,#f596aa);
 }
 
-#contain {
-    display: flex;
-    float: left;
-    width: 35px;
-    height: 600px
+.OtherLogos {
+    width: 32px;
+    height: 32px;
+    margin: 6px 0;
 }
 
-#next-contain {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: auto 0;
-    width: 35px;
-    height: 200px;
+#MyInformation {
+    width: 32px;
+    height: 220px;
+    transform: translate(0, -144px);
+    transition: 0.8s;
+    position: absolute;
+    left: 4px;
+    top: 0;
+}
+
+#MyInformation:hover {
+transform: translate(0px, 0);
 }
 
 #middle p {
