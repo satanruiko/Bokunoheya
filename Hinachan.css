@@ -1,5 +1,15 @@
 /* Written by hzx */
 
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
 @media(min-width:600px) {
     .content {
         width: 50%;
@@ -17,11 +27,11 @@
 
 @media(max-width:599px) {
     img {
-        width: 90%;
+        width: 96%;
         margin: 0 auto;
     }
     .dailies {
-        width: 90%;
+        width: 96%;
         margin: 0 auto;
     }
 }
