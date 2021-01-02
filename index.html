@@ -1,166 +1,231 @@
-<!DOCTYPE html>
 <html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="Homepage.css">
-    <link rel="shortcut icon" type="image/x-icon" href="icon\favicon.ico">
-    <link rel="icon" type="image/x-icon" href="icon\favicon.ico">
     <meta charset="utf-8">
-    <meta name="description" content="献给世界的女神——加藤惠。我的想法、秘密、烦恼，你愿意听吗？">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta name="author" content="安芸倫也">
-    <title>加藤のベレー帽</title>
+    <link rel="stylesheet" type="text/css" href="Hinachan.css">
+    <title>雛小織の日記</title>
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
 </head>
 
 <body>
-    <div id="left">
-        <!--左-->
-        <div id="left_top">
-            <h1><a class="linkfixedcolor" href="index.html">
-                    欢迎来到<br />我的世界</a></h1>
-            <h3 class="linkfixedcolor">僕の世界へよこそう</h3>
+    <div id="vueWrap">
+        <ul>
+            <li>本页所有图片均来自<a href='https://www.pixiv.net/users/13379747/' alt='authorlink'>ひみつ</a></li>
+            <li>想让更多人欣赏到ひみつ先生的作品</li>
+            <li>我会及时更新的！</li>
+        </ul>
+        <div class="dailycontainer">
+            <article class="dailies">
+                <img src="illustration/1.png">
+                <div class="buttons">
+                    <button @click='flag1=!flag1' v-if='flag1'>查看译文</button>
+                    <button @click='flag1=!flag1' v-else>隐藏译文</button>
+                </div>
+                <div class="content">
+                    <header>
+                        <h3>小織の日記</h3>
+                    </header>
+                    <section v-if='flag1'>
+                        <p>名前：雛 小織（ひな こおり）</p>
+                        <p>愛称：ヒナっちゃん</p>
+                        <p>爽やかでかわいい後輩ちゃん</p>
+                        <p>趣味は絵、DIY、歌、ダンス、小動物と少し[特殊なこと]</p>
+                        <p>舞踏部の新入り。先輩たちに可愛がられている</p>
+                        <p>イラストレーター／バレエダンサー（幻想）／Vtuber（？）／猫カフェオンナーになるのが夢</p>
+                        <p>普段は大人しくて、冷静な子だが、［特殊な趣味］がバレると慌てる</p>
+                    </section>
+                    <section v-else>
+                        <p>名字：雏小织</p>
+                        <p>爱称：Hina酱</p>
+                        <p>清纯可爱的学妹酱</p>
+                        <p>兴趣是画画、DIY、唱歌、舞蹈、小动物，和一些特殊的事情</p>
+                        <p>舞蹈部的新成员，被前辈们宠爱着</p>
+                        <p>梦想是成为插画师、芭蕾舞者、Vtuber（？）、猫咖女孩</p>
+                        <p>平时是一个成熟冷静的孩子，但是害怕自己的特殊兴趣暴露</p>
+                    </section>
+                </div>
+            </article>
         </div>
-        <div id="left_middle"><img src="icon\coolapk.png" width="35px" height="35px">
-            <img src="icon\github.png" width="35px" height="35px">
-            <img src="icon\bilibili.png" width="35px" height="35px">
-            <img src="icon\google.png" width="35px" height="35px"></div>
-        <div id="katou_megumi">
-            <a href="https://zh.moegirl.org.cn/%E5%8A%A0%E8%97%A4%E6%83%A0" target="_blank">
-                <img src="My goddess.png" width="187px" height="270px"></a>
-            <p class="greeting">Welcome</p>
-            <p class="greeting">安芸くん</p>
+        <div class="dailycontainer">
+            <article class="dailies"><img src="illustration/2.png">
+                <div class="buttons">
+                    <button @click='flag2=!flag2' v-if='flag2'>查看译文</button>
+                    <button @click='flag2=!flag2' v-else>隐藏译文</button>
+                </div>
+                <div class="content">
+                    <header>
+                        <h3> ×月×日</h3>
+                    </header>
+                    <section v-if='flag2'>
+                        <p>中学卒業後に東京に引っ越してきた。</p>
+                        <p>初めての大都市だから、ワクワクするようなことがたくさんあった。高級そうなおもちゃを売ってるところが多くて、もう大興奮。 こんなに快適だったなんて、やっぱり大都市は最高だね。
+                        </p>
+                        <p>ちょうど春休みだし、家であんな遊びやこんな遊びもできちゃう。勉強はできるほうだから、成績の心配はしなくてもいいよ。 じゃないと、家族が安心して送り出せないもん。
+                        </p>
+                        <p>お父さんとお母さんのほうも心配しなくてもいいよ。二人とも長年よその土地で働いているから。 あとねあとね、親からのお金も無駄に使ってないよ。おもちゃは全部バイトで稼いだ買ったんだよ！
+                        </p>
+                        <p>おはよう！昨日は楽しかった！</p>
+                    </section>
+                    <section v-else>
+                        <p>初中毕业之后搬去了东京</p>
+                        <p>因为初来大城市，有许多让我激动的事情。有很多卖看起来很高级的玩具的店，已经兴奋起来了。果然还是大城市好呢。</p>
+                        <p>正好是春假，所以可以在家随心所欲地玩。因为有好好学习，不用担心成绩。不这样的话，家里人也不会安心地让我离家求学。</p>
+                        <p>父母那边也不用担心。两人长年在那片土地上工作。还有哦还有哦，我没有乱用父母给的钱哟。买玩具的钱全部是自己兼职赚的！</p>
+                        <p>早上好，昨天也很开心！</p>
+                    </section>
+                </div>
+            </article>
+        </div>
+        <div class="dailycontainer">
+            <article class="dailies"><img src="illustration/3.png">
+                <div class="buttons">
+                    <button @click='flag3=!flag3' v-if='flag3'>查看译文</button>
+                    <button @click='flag3=!flag3' v-else>隐藏译文</button>
+                </div>
+                <div class="content">
+                    <header>
+                        <h3>3月x日 雨のち晴れ</h3>
+                    </header>
+                    <section v-if='flag3'>
+                        <p>今日は放課後、ご飯を食べに行くつもりだったけど、雨だから、部室で自主練しよう。</p>
+                        <p>もうすぐ卒業して東京へ行くと思うと、寂しくなっちゃう。</p>
+                        <p>最近肌寒いけど、暖房のおかげで、薄着しても平気。</p>
+                        <p>よく「この1セットが終わればラーメン一杯分痩せるよ」と先生が励ましてくるけど 私、太りにくい体質だよね、なんか遺伝的にそうなってるっぽいヽ(*’-^*)。</p>
+                        <p>ただ足ストレッチとか動きを修正するとかがかなり大変………………。</p>
+                        <p>でもバレエやりはじめてから、体がやわらかくなって、楽に縄で遊べるようになっている……</p>
+                        <p>雨が止んだ！ちょっと休んだら行こっか！ お腹すいた……ラーメン食べたい……</p>
+                    </section>
+                    <section v-else>
+                        <p>今天放学后，虽然想去吃饭，但是外面在下雨，只好在活动室自主练习</p>
+                        <p>想到毕业之后就要去东京，就感觉有些寂寞</p>
+                        <p>尽管最近有些寒冷，但是多亏了在空调房，穿的少也没有关系。</p>
+                        <p>この1セットが終わればラーメン一杯分痩せるよ</p>
+                        <p>只是足部伸展和修正动作就这么困难了吗</p>
+                        <p>不过因为开始学芭蕾了，身体也变得柔软了，可以随意地捆绑了嘻嘻</p>
+                        <p>雨停了！稍微休息一下就走啦，肚子饿了，想吃拉面。</p>
+                    </section>
+                </div>
+            </article>
+        </div>
+        <div class="dailycontainer">
+            <article class="dailies"><img src="illustration/4.png">
+                <div class="buttons">
+                    <button @click='flag4=!flag4' v-if='flag4'>查看译文</button>
+                    <button @click='flag4=!flag4' v-else>隐藏译文</button>
+                </div>
+                <div class="content">
+                    <header>
+                        <h3>「お出かけ楽しい 」9月27日 晴れ</h3>
+                    </header>
+                    <section v-if='flag4'>
+                        <p>こおりっていう名前だけど、実はとびっきりの寂しがり屋で、にぎやかな場所をぶらつくのが好きなんだ。</p>
+                        <p>ただクラスメイトたちに「クールビューティ」扱いされて……</p>
+                        <p>名前のせいか、自分のひみつがバレるのが怖いか、特に親しい友達ができないよね（笑）</p>
+                        <p>がんばって高校で息が合う友達をつくりたい୧(๑•̀ㅁ•́๑)૭✧</p>
+                        <p>今日は都心の商店街で静かな書店を見つけた</p>
+                        <p>中で本を読んでいると、ついつい外の景色に目がいっちゃう。</p>
+                        <p> カラフルな服、鍋蓋を叩くアーティストやライオンを連れている人…… </p>
+                        <p>ライオン？？？？？？</p>
+                        <p>…………</p>
+                        <p>と思ったら犬だった…… </p>
+                        <p>…… ……</p>
+                    </section>
+                    <section v-else>
+                        <p>虽然我叫小织，实际上确实一个非常容易感到寂寞的人，喜欢在热闹的地方漫步。</p>
+                        <p>不过我被班上的同学当成冷美人</p>
+                        <p>不知道是不是名字的原因，害怕自己的秘密暴露，就交不到特别亲密的朋友。</p>
+                        <p>加油在高中交到趣味相投的朋友吧！୧(๑•̀ㅁ•́๑)૭✧</p>
+                        <p>今天在市区的商店街里发现了一家安静的书店</p>
+                        <p>在里面读书的时候，不小心看到了外面的景色</p>
+                        <p>穿着绚丽的衣服，敲着锅盖的艺术家，牵着狮子的人</p>
+                        <p>是狮子？像这样一想，才发现原来那是狗</p>
+                    </section>
+                </div>
+            </article>
+        </div>
+        <div class="dailycontainer">
+            <article class="dailies"><img src="illustration/5.png">
+                <div class="buttons">
+                    <button @click='flag5=!flag5' v-if='flag5'>查看译文</button>
+                    <button @click='flag5=!flag5' v-else>隐藏译文</button>
+                </div>
+                <div class="content">
+                    <header>
+                        <h3>「いい汗をかいた後」11月13日 日照り雨</h3>
+                    </header>
+                    <section v-if='flag5'>
+                        <p>今日、走った！</p>
+                        <p>冬は太りの冬！</p>
+                        <p>だから走ってきた！</p>
+                        <p>寒くなるから、髪を伸ばそうかな……</p>
+                        <p>週末はピクニックに行きたい～あとでスーパーでおいしいもの買おう～(^^♪</p>
+                        <p>外でアレするのもアリかも……？</p>
+                        <p>……いやいや、落ち着こう。せめて地形の考察はしておかないと……</p>
+                        <p>………………</p>
+                        <p>………… </p>
+                        <p>……</p>
+                        <p>微糖ミルクティーとショートケーキに含まれるカロリーって何キロのランニングに相当するだっけ……</p>
+                    </section>
+                    <section v-else>
+                        <p>今天跑步啦！</p>
+                        <p>冬天是令人发胖的冬天</p>
+                        <p>所以今天去跑步啦！</p>
+                        <p>变冷了呐，要不要把头发留长呢</p>
+                        <p>周末想去野餐，然后去商场买好吃的！</p>
+                        <p>也有在外面露出的打算？</p>
+                        <p>不不不，冷静下来。起码先考察一下地形吧</p>
+                        <p>………………</p>
+                        <p>………… </p>
+                        <p>……</p>
+                        <p>微糖奶茶和脆饼里含有的卡路里相当于跑多少公里消耗的热量呢？</p>
+                    </section>
+                </div>
+            </article>
+        </div>
+        <div class="dailycontainer">
+            <article class="dailies"><img src="illustration/6.png">
+                <div class="buttons">
+                    <button @click='flag6=!flag6' v-if='flag6'>查看译文</button>
+                    <button @click='flag6=!flag6' v-else>隐藏译文</button>
+                </div>
+                <div class="content">
+                    <header>
+                        <h3>「ひとりぼっちのクリスマス」12月24日 晴れ</h3>
+                    </header>
+                    <section v-if='flag6'>
+                        <p>今年のクリスマスも一人で過ごしたね~</p>
+                        <p>お気に入りのお店に行ったり、適当になんか買ったり、ショッピングモールのベンチに座って、しばらく賑やかな空気に浸ったあと、お家に帰った！</p>
+                        <p>クラスメイトたちと仲良くやってるけど、一緒に遊びに行く時だけは忘れられるよね。 まぁ、最初の数回はずっと空気クラッシャーだったから、あきらめられたんだね。</p>
+                        <p>結局は自分の問題だけど、コミュニケーションって本当に難しい~ 自分の喜びを話しても反応されないから、そっちもたぶん困ってるかなw でも、もしひみつがバレたら……怖すぎる！想像できない！ やっぱり距離を置いたままでいい！</p>
+                        <p>だけど、何でも話せる親友に出会えるって、変な予感がするんだ！ それまでは目立たないイイ子で居よう！</p>
+                        <p>サンタさん、そっと夢の中から出て、頭をなでなでして、私に“頑張れ”って言ってください お願いです~</p>
+                    </section>
+                    <section v-else>
+                        <p>今年的圣诞节也是一个人度过呢</p>
+                        <p>去喜欢的店，买点什么东西，在购物中心的长椅上坐一会，短暂地沉浸在热闹的空气里之后，回家咯！</p>
+                        <p>虽然和同班同学相处得比较好，他们一起去玩的时候我却被遗忘了。哈，最开始的几次我一直是气氛粉碎者呢，被同学放弃了。</p>
+                        <p>尽管是自己的问题，交流这回事是真的难啊~我把我的喜好告诉对方，对方也没明显反应，大概对方很困扰吧。但是，要是秘密暴露了……太恐怖了，不敢想象。果然还是保持距离比较好吧。</p>
+                        <p>不过，能遇见与之分享一切的挚友，我有这样奇怪的预感！在那之前，做一个不显眼的好孩子吧！</p>
+                        <p>圣诞老人，轻轻地从梦中走出，摸摸我的头，对我说：“加油哦。”拜托了！</p>
+                    </section>
+                </div>
+            </article>
         </div>
     </div>
-    <div id="middle">
-        <!--中-->
-        <div id="kokoronashi">
-            <header>
-                <h3>心做し-鹿乃(かの)</h3>
-            </header>
-            <pre>
-                ねぇ、もしも全て投げ捨てられたら    如果能舍弃全部
-            　　
-            
-            　　笑って生きることが楽になるの？    像那样笑着生活就快乐吗？
-            　　
-            
-            　　また胸が痛くなるから    我的胸口又隐隐作痛
-            
-            
-            　　もう何も言わないでよ    请你不要再说下去
-            
-            　　
-            　　ねぇ、もしも全て忘れられたなら    如果能忘记所有
-            
-            
-            　　泣かないで生きることも楽になるの？    从不哭泣的生活也会快乐吗？
-            
-            
-            　　でもそんなこと出来ないから    不过那样的事情我做不到
-            
-            
-            　　もう何も見せないでよ    请你不要再给我看什么了。
-            
-            
-            　　君にどれだけ近づいても    不论多么接近你
-            
-            
-            　　僕の心臓は一つだけ    我的心也只有一颗
-            
-            
-            　　酷いよ、酷いよ、もういっそ僕の体を    你的爱太猛烈
-            
-            
-            　　壊して、引き裂いて、好きなようにしてよ    那随便把我的身体毁坏，撕裂吧
-            
-            
-            　　叫んで、藻掻いて、瞼を腫らしても    即使呼喊，挣扎，哭肿眼睛
-            
-            
-            　　まだ君は僕の事を抱きしめて離さない    你也仍然怀抱着我不松开
-            
-            
-            　　もういいよ    这样也好
-            　　
-            
-            　　ねぇ、もしも僕の願いが叶うなら    如果我的愿望能实现
-            
-            
-            　　君と同じものが欲しいんだ      我的愿望一定是你所想
-            
-            　　
-            　　でも僕には存在しないから      但是我没有心
-            
-            
-            　　じゃあ、せめてここに来てよ    那么，能不能来我这里
-            
-            
-            　　君にどれだけ愛されても、僕の心臓は一つだけ    被你爱的再深，我也只有一颗心
-            
-            
-            　　やめてよ、やめてよ、優しくしないでよ    请停下来，停下来，不要这么温柔
-            
-            
-            　　どうしても僕には理解が出来ないよ    不论怎样我都不能理解
-            
-            
-            　　痛いよ、痛いよ、言葉で教えてよ    痛啊，痛。能不能用语言告诉我
-            
-            
-            　　こんなの知らないよ    那样的事情我不明白啊
-                        
-
-            　　独りにしないで     不要再一个人了
-            　　
-
-            　　酷いよ、酷いよ、もういっそ僕の体を     你的爱太猛烈
-            
-
-            　　壊して、引き裂いて、好きなようにしてよ    那随便把我的身体毁坏，撕裂吧
-            
-
-            　　叫んで、藻掻いて、瞼を腫らしても    即使呼喊，挣扎，哭肿眼睛
-            
-
-            　　まだ君は僕の事を抱きしめて離さない    你也仍然怀抱着我不松开
-            
-
-            　　もういいよ    这样也好
-            
-
-            　　ねぇ、もしも僕に心があるなら    如果我有心的话
-            
-
-            　　どうやってそれを見つければいいの    要怎样才能找到爱情呢
-            
-
-            　　少し微笑んで君が言う    你微笑着说
-            
-
-            　「それはね、ここにあるよ」    那个啊，就在这里
-            　　</pre>
-        </div>
-    </div>
-    <div id="right">
-        <!--右-->
-        <div id="portrait">
-            <a href="index.html" alt="Homepage"><img id="logo" src="icon\0.ico" alt="myself" width="150px" height="150px"></a>
-        </div>
-        <nav id="options">
-            <ul>
-                <li class="a"><a class="linkfixedcolor" href="Tools\Tools.html">工具站点</a></li>
-                <li class="a"><a class="linkfixedcolor" href="Python\Python.html">Python</a></li>
-                <li class="a"><a class="linkfixedcolor" href="Prose\Prose.html">随笔</a></li>
-                <li class="a"><a class="linkfixedcolor" href="Photography\Photography.html">摄影</a></li>
-                <li class="a"><a class="linkfixedcolor" href="Anime\Anime.html">动漫</a></li>
-            </ul>
-        </nav>
-        <div id="bottom">
-            <p class="idiom">荷尔蒙决定一见钟情</p>
-            <p class="idiom">多巴胺决定天长地久</p>
-        </div>
-    </div>
-    <script src="js\AutoChangeLogo.js"></script>
+    <script>
+        var HinaKoori = new Vue({
+            el: '#vueWrap',
+            data: {
+                flag1: true,
+                flag2: true,
+                flag3: true,
+                flag4: true,
+                flag5: true,
+                flag6: true,
+            }
+        })
+    </script>
 </body>
 
 </html>

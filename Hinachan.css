@@ -1,0 +1,85 @@
+/* Written by hzx */
+
+@media(min-width:600px) {
+    .content {
+        width: 50%;
+        position: absolute;
+        right: 0;
+        top: 1em;
+    }
+    img {
+        width: 45%;
+    }
+    .buttons {
+        width: 45%;
+    }
+}
+
+@media(max-width:599px) {
+    img {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .dailies {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+.dailycontainer {
+    height: fit-content;
+    position: relative;
+    margin: 8em 0;
+    padding: 2em;
+    font-size: 1em;
+}
+
+.buttons {
+    margin: 2em 0;
+}
+
+.buttons button {
+    display: block;
+    margin: 0 auto;
+    outline: none;
+    background-color: #7db9de;
+    border: none;
+    color: aliceblue;
+    width: 100px;
+    height: 62px;
+    border-radius: 1em;
+    font-size: 1em;
+}
+
+.dailies {
+    height: 100%;
+    font-size: 1em;
+    overflow: hidden;
+}
+
+img {
+    border: 2px#7db9de solid;
+    border-radius: 0.5em;
+}
+
+.content section {
+    text-indent: 1.5em;
+    color: #00aa90;
+    line-height: 200%;
+}
+
+a {
+    color: #00aa90;
+}
