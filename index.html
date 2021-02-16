@@ -17,7 +17,7 @@
         </ul>
         <div class="dailycontainer">
             <article class="dailies">
-                <img src="illustration/1.png">
+                <img src="illustration/1.webp">
                 <div class="buttons">
                     <button @click='flag1=!flag1' v-if='flag1'>查看译文</button>
                     <button @click='flag1=!flag1' v-else>隐藏译文</button>
@@ -48,7 +48,7 @@
             </article>
         </div>
         <div class="dailycontainer">
-            <article class="dailies"><img src="illustration/2.png">
+            <article class="dailies"><img src="illustration/2.webp">
                 <div class="buttons">
                     <button @click='flag2=!flag2' v-if='flag2'>查看译文</button>
                     <button @click='flag2=!flag2' v-else>隐藏译文</button>
@@ -78,7 +78,7 @@
             </article>
         </div>
         <div class="dailycontainer">
-            <article class="dailies"><img src="illustration/3.png">
+            <article class="dailies"><img src="illustration/3.webp">
                 <div class="buttons">
                     <button @click='flag3=!flag3' v-if='flag3'>查看译文</button>
                     <button @click='flag3=!flag3' v-else>隐藏译文</button>
@@ -109,7 +109,7 @@
             </article>
         </div>
         <div class="dailycontainer">
-            <article class="dailies"><img src="illustration/4.png">
+            <article class="dailies"><img src="illustration/4.webp">
                 <div class="buttons">
                     <button @click='flag4=!flag4' v-if='flag4'>查看译文</button>
                     <button @click='flag4=!flag4' v-else>隐藏译文</button>
@@ -145,7 +145,7 @@
             </article>
         </div>
         <div class="dailycontainer">
-            <article class="dailies"><img src="illustration/5.png">
+            <article class="dailies"><img src="illustration/5.webp">
                 <div class="buttons">
                     <button @click='flag5=!flag5' v-if='flag5'>查看译文</button>
                     <button @click='flag5=!flag5' v-else>隐藏译文</button>
@@ -184,7 +184,7 @@
             </article>
         </div>
         <div class="dailycontainer">
-            <article class="dailies"><img src="illustration/6.png">
+            <article class="dailies"><img src="illustration/6.webp">
                 <div class="buttons">
                     <button @click='flag6=!flag6' v-if='flag6'>查看译文</button>
                     <button @click='flag6=!flag6' v-else>隐藏译文</button>
@@ -213,6 +213,34 @@
             </article>
         </div>
     </div>
+    <div class="dailycontainer">
+        <article class="dailies"><img src="illustration/7.webp">
+            <div class="buttons">
+                <button @click='flag7=!flag7' v-if='flag7'>查看译文</button>
+                <button @click='flag7=!flag7' v-else>隐藏译文</button>
+            </div>
+            <div class="content">
+                <header>
+                    <h3>小織の日記　「ひとりぼっちのバレンタインデー」</h3>
+                </header>
+                <section v-if='flag7'>
+                    <p>デート服を着て、街角でイチャイチャしているカップルたちを眺め、待ち合わせしているフリをして、自撮りポーズ～</p>
+                    <p>こんな日はやっぱり賑やかな場所に行きたくなっちゃうよね～</p>
+                    <p>家にいたら泣いちゃうかも～　誰もそばにいてくれないし、クラスメイトたちも遊びに誘ってくれない でも元気になれ！私！</p>
+                    <p>私はひとりじゃない。今日この特別な日に、モニターの向こうから見守られているのがわかるから。私が作ったお菓子を受け取ってください</p>
+                    <p>小織の今日の格好、似合っているかな？　今後も一緒に居てください。みんなが居てくれて、本当に幸せです！</p>
+                </section>
+                <section v-else>
+                    <p>穿着约会的衣服，看着街角的情侣们卿卿我我，装作在等人的样子，我拿起手机自拍</p>
+                    <p>像这样的日子果然还是要去热闹的地方啊</p>
+                    <p>待在家里搞不好会哭出来，没人和我一起，同学也不邀请我去玩。不过，打起精神来！</p>
+                    <p>我不是一个人，我知道在监控那边有人在守护我。请收下我做的点心吧</p>
+                    <p>小织今天的打扮，好看吗？以后也要一直在一起！和大家在一起真的很幸福！</p>
+                </section>
+            </div>
+        </article>
+    </div>
+    </div>
     <script>
         var HinaKoori = new Vue({
             el: '#vueWrap',
@@ -223,6 +251,7 @@
                 flag4: true,
                 flag5: true,
                 flag6: true,
+                flag7: true
             }
         })
     </script>
